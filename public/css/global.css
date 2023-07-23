@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700
+}
+
+body {
+    background: #02060E;
+}
+
+.cointdown-text {
+    animation: countdown 1s infinite;
+}
+@keyframes countdown {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+.nav-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #141414d8;
+    padding: 30px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #2e2e2e;
+    height: 30px;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+}
+
+.team-card .team-username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    flex-direction: row;
+}
+
+.team-card .team-username h3 {
+    color: #c7c7c7;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.team-card .team-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    flex-direction: row;
+}
