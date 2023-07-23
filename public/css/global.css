@@ -123,3 +123,37 @@ body {
         transform: translateX(0%);
     }
 }
+
+.main-text {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: main-text-change 10s infinite;
+}
+
+@media (max-width: 768px) {
+    .main-text {
+        display: none;
+    }
+}
+
+@keyframes main-text-change {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
