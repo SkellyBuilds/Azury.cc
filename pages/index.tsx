@@ -33,6 +33,7 @@ export default function Index() {
                 We are a small team of developers who are passionate about programming and want to share our knowledge with the world.
                 </p>
         </div>
+        <br></br>
         <div className="flex flex-col space-y-5 text-right w-80 ml-auto">
             <h1 className="font-bold text-white text-4xl text-right"><i className="fa fa-rocket text-blue-400" /> Our Mission</h1>
             <p className="mt-3 font-light text-right text-zinc-300">
