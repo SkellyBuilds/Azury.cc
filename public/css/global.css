@@ -94,6 +94,7 @@ body {
 }
 
 .nav-items {
+    position: fixed;
     display: none;
     justify-content: center;
     align-items: center;
@@ -103,6 +104,7 @@ body {
     height: 50px;
     border-radius: 50px;
     padding: 0px 20px;
+    box-shadow: inset 0px 0px 10px 0px #202020;
 }
 
 @media (max-width: 768px) {
