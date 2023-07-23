@@ -75,3 +75,29 @@ body {
     margin-left: 20px;
     flex-direction: row;
 }
+
+@media (max-width: 768px) {
+    .team-card .team-username h3 {
+        font-size: 15px;
+    }
+     
+    .team-card .team-socials {
+        display: none;
+    }
+
+    .team-card {
+        padding: 20px 10px;
+    }
+
+    .team-card .team-username {
+        margin-left: 10px;
+    }
+
+    .team-card .team-username h3 {
+        font-size: 15px;
+    }
+
+    .team-card .team-socials {
+        margin-left: 10px;
+    }
+}
