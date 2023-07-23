@@ -6,6 +6,7 @@ import NProgress from 'nprogress';
 import Router from 'next/router';
 import Head from 'next/head';
 import ReactDOM from 'react-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 import Header from '../components/Static/Header';
 
@@ -26,6 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <main className="min-h-[100vh] max-w-screen-lg p-5 w-full md:py-10 md:w-10/12 lg:py-20 lg:w-8/12 mx-auto transition-all duration-300">
                 <Header />
                 <Component {...pageProps} />
+                <Toaster />
             </main>
         </>
     );
