@@ -57,7 +57,7 @@ export default function Index() {
     }
     }
     
-    return (
+    return ( 
         setInterval(() => {
             thisDate = Date.now();
             typeof document !== 'undefined' ? document.querySelector('.cointdown-text').innerHTML = countDown(thisDate, new Date('2023-10-08').getTime()) : null;
