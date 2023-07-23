@@ -44,7 +44,7 @@ export default function Index() {
         <br></br><br></br><br></br>
         <div className="flex flex-col space-y-5 text-center ml-auto">
             <h1 className="font-bold text-white text-4xl text-center">Our Team <i className="fa fa-wrench text-blue-400" /></h1>
-            <div className="cointainer flex flex-row space-x-5 justify-center mr-auto ml-auto flex-wrap flex-grow-0 flex-shrink-0 flex-basis-auto">
+            <div className="team-row cointainer flex flex-row space-x-5 justify-center mr-auto ml-auto flex-wrap flex-grow-0 flex-shrink-0 flex-basis-auto">
 
             <a className="team-card" target="_blank" href="https://discord.com/users/693553429380857978">
                 <img src="https://cdn.discordapp.com/avatars/693553429380857978/c0409547c4230f9d20cf529ee8467c52.webp?size=1024?size=256" className="rounded-full w-10 h-10 mx-auto" />
