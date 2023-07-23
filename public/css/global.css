@@ -76,28 +76,19 @@ body {
     flex-direction: row;
 }
 
+.team-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
 @media (max-width: 768px) {
-    .team-card .team-username h3 {
-        font-size: 15px;
+    .team-row {
+        flex-direction: column;
     }
-     
-    .team-card .team-socials {
-        display: none;
-    }
-
     .team-card {
-        padding: 20px 10px;
-    }
-
-    .team-card .team-username {
-        margin-left: 10px;
-    }
-
-    .team-card .team-username h3 {
-        font-size: 15px;
-    }
-
-    .team-card .team-socials {
-        margin-left: 10px;
+        margin-bottom: 20px;
     }
 }
