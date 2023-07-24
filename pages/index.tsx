@@ -12,7 +12,7 @@ export default function Index() {
         return `${days}d, ${hours}h, ${minutes}m, ${seconds}s`;
     };
 
-    let text = ['Studios', 'Community', 'Hangout', 'Development'];
+    let text = ['Studios', 'Community', 'Development', 'Industries'];
     let usedText = [];
 
     setInterval(() => {
@@ -21,12 +21,49 @@ export default function Index() {
                 const random = Math.floor(Math.random() * text.length);
                 if(usedText.length === text.length) {
                     usedText = [];
+                    document.querySelector('.main-text').animate([
+                        {
+                            opacity: 0,
+                            transform: 'translateY(-20px)'
+                        },
+                        {
+                            opacity: 1,
+                            transform: 'translateY(0px)'
+                        },
+                        {
+                            opacity: 1,
+                            transform: 'translateY(0px)'
+                        },
+                        {
+                            opacity: 0,
+                            transform: 'translateY(20px)'
+                        }
+                    ], {
+                        duration: 500,
+                        easing: 'ease-in-out',
+                        fill: 'forwards'
+                    });
                     document.querySelector('.main-text').innerHTML = 'Industries'
+                    return;
                 }
                 if(usedText.includes(text[random])) {
                     randomText();
                 } else {
                     usedText.push(text[random]);
+                    document.querySelector('.main-text').animate([
+                        {
+                            opacity: 0,
+                            transform: 'translateY(-20px)'
+                        },
+                        {
+                            opacity: 1,
+                            transform: 'translateY(0px)'
+                        },
+                    ], {
+                        duration: 500,
+                        easing: 'ease-in-out',
+                        fill: 'forwards'
+                    });
                     document.querySelector('.main-text').innerHTML = text[random];
                 }
             };
@@ -52,7 +89,12 @@ export default function Index() {
     const sendNotification = (title: string, body: string) => {
         if(typeof document !== 'undefined') {
         if(Notification?.permission === 'granted') {
+            if(localStorage.getItem('alreadynotified_'+title) === 'true') {
+                return;
+            } else {
             new Notification(title, { body });
+            localStorage.setItem('alreadynotified_'+title, 'true');
+            }
         } 
     }
     }
@@ -69,8 +111,9 @@ export default function Index() {
         <>
         <div className="h-96 flex items-center justify-center">
             <div>
-                <h1 className="font-bold text-6xl text-center other-text">Azury&nbsp;<p className="main-text">Industries</p></h1>
-                <p className="mt-3 font-light text-center mx-auto text-zinc-300">COMING SOON IN <span className="cointdown-text">{countDown(thisDate, new Date('2023-10-08').getTime())}</span></p>
+                <h1 className="font-bold text-6xl text-center text-transparent bg-gradient-to-r bg-clip-text from-gray-300 to-gray-500">Azury&nbsp;<p className="main-text text-transparent bg-gradient-to-r bg-clip-text from-gray-300 to-gray-500">Industries</p></h1>
+                
+                <p className="mt-3 font-light text-center mx-auto text-zinc-300">COMING SOON IN <span className="cointdown-text uppercase">{countDown(thisDate, new Date('2023-10-08').getTime())}</span></p>
   
                 <p className="mt-3 font-light text-center mx-auto text-zinc-300"><a className="sub-text-think" id="sub-text-think">Create.</a> <a className="sub-text-make" id="sub-text-make">Automate.</a> <a className="sub-text-solve" id="sub-text-solve">Engage.</a></p>
 
