@@ -210,3 +210,53 @@ body {
 .project-card:hover {
     transform: scale(1.05);
 }
+
+.tech-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #141414d8;
+    padding: 30px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #2e2e2e;
+    height: 30px;
+}
+
+.tech-card:hover {
+    transform: scale(1.05);
+}
+
+.tech-card .tech-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.tech-card .tech-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.tech-card .tech-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    .tech-card .tech-title {
+        display: none;
+    }
+}
+
+.tech-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
