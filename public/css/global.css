@@ -35,6 +35,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
 }
 
 .team-card {
@@ -47,7 +48,7 @@ body {
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
     border: 2px solid #2e2e2e;
-    height: 30px;
+    height: 10px;
 }
 
 .team-card:hover {
@@ -259,4 +260,26 @@ body {
     align-items: center;
     flex-direction: row;
     margin-top: 20px;
+}
+
+.text-casing {
+    width: fit-content;
+    border: 1px solid #c2c2c2;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #c2c2c2;
+    background: #c2c2c24b;
+}
+
+.bg-text-blue.jsx-ed981c243ab0ceaf{@supports(background-clip:text)or (-webkit-background-clip:text){background-image:url("data:image/svg+xml,%3Csvg width='1550' height='750' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%23449DD1' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%231C7DBE'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%230057A8'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%2300408F'/%3E%3C/g%3E%3C/svg%3E%0A");-webkit-background-size:150%auto;-moz-background-size:150%auto;-o-background-size:150%auto;background-size:150%auto;background-position:center;color:transparent;-webkit-background-clip:text;background-clip:text}}
+.bg-text-purple.jsx-1b2b5b2a3b6a5b5a{@supports(background-clip:text)or (-webkit-background-clip:text){background-image:url("data:image/svg+xml,%3Csvg width='1550' height='750' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%238C4F9F' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%236B2D8F'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%234F1B7A'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%233E0F6B'/%3E%3C/g%3E%3C/svg%3E%0A");-webkit-background-size:150%auto;-moz-background-size:150%auto;-o-background-size:150%auto;background-size:150%auto;background-position:center;color:transparent;-webkit-background-clip:text;background-clip:text}}
+.bg-text-lightgray.jsx-1b2b5b2a3b6a5b5a{@supports(background-clip:text)or (-webkit-background-clip:text){background-image:url("data:image/svg+xml,%3Csvg width='1550' height='750' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%23BDBDBD' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%23808080'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%23666666'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23595959'/%3E%3C/g%3E%3C/svg%3E%0A");-webkit-background-size:150%auto;-moz-background-size:150%auto;-o-background-size:150%auto;background-size:150%auto;background-position:center;color:transparent;-webkit-background-clip:text;background-clip:text}}
+/* Now make a blue background color like this */
+.bg-blue-waves.jsx-1b2b5b2a3b6a5b5a{
+    background-image:url("data:image/svg+xml,%3Csvg width='1550' height='750' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%23449DD1' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%231C7DBE'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%230057A8'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%2300408F'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size: 150% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
