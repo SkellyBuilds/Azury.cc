@@ -127,28 +127,17 @@ body {
 }
 
 .main-text {
-    text-shadow: -1px -1px 7px rgba(0,0,0,.2), -1px -1px 3px rgba(255,255,255,.6);
-    color: #d3d3d3;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation: main-text-change 10s infinite;
 }
 
 .other-text {
-    text-shadow: -1px -1px 7px rgba(0,0,0,.2), -1px -1px 3px rgba(255,255,255,.6);
-    color: #d3d3d3;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-@media (max-width: 768px) {
-    .main-text {
-        display: none;
-    }
 }
 
 @keyframes main-text-change {
@@ -205,4 +194,19 @@ body {
         scale: 1;
         color: #fff
     }
+}
+
+.project-card {
+    cursor: pointer;
+    --gradient-1: rgb(5, 5, 12);
+    --gradient-2: rgba(5, 5, 12, .9);
+    --gradient-3: rgba(5, 5, 12, .5);
+    background: linear-gradient(10deg, var(--gradient-1), var(--gradient-1), var(--gradient-2), var(--gradient-3)), var(--card-banner);
+    background-size: cover;
+    border: 2px solid #2e2e2e;
+    border-radius: 20px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
 }
