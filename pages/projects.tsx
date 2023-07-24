@@ -51,9 +51,9 @@ export default function Projects() {
         <>
         <div className="h-96 flex items-center justify-center">
             <div>
-                <h1 className="font-bold text-6xl text-center text-transparent bg-gradient-to-r bg-clip-text from-gray-300 to-gray-500">Our Projects</h1>
+            <h1 className="font-bold text-6xl text-center jsx-1b2b5b2a3b6a5b5a bg-text-lightgray">Our Projects</h1>
                 
-                <p className="mt-3 font-light text-center mx-auto text-zinc-300">COMING SOON IN <span className="cointdown-text uppercase">{countDown(thisDate, new Date('2023-10-08').getTime())}</span></p>
+            <p className="mt-3 font-light text-center mx-auto text-zinc-300 text-bold text-casing"><b>LAUNCH IN</b> <span className="cointdown-text uppercase">{countDown(thisDate, new Date('2023-10-08').getTime())}</span></p>
   
                 <p className="mt-3 font-light text-center mx-auto text-zinc-300"><a className="sub-text-think" id="sub-text-think">Create.</a> <a className="sub-text-make" id="sub-text-make">Automate.</a> <a className="sub-text-solve" id="sub-text-solve">Engage.</a></p>
 
