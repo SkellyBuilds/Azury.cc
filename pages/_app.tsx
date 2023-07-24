@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     <link href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" rel="stylesheet" />
                 </>
             } />
-            <main className="min-h-[100vh] max-w-screen-lg p-5 w-full md:py-10 md:w-10/12 lg:py-20 lg:w-8/12 mx-auto transition-all duration-300">
+            <main className="min-h-[100vh] max-w-screen-lg p-5 w-full md:py-10 md:w-10/12 lg:py-10 lg:w-10/12 mx-auto transition-all duration-300">
                 <Header />
                 <Component {...pageProps} />
                 <Toaster />
