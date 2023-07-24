@@ -167,6 +167,34 @@ export default function Index() {
 
             </div>
         </div>
+        <br></br><br></br><br></br>
+        <div className="flex flex-col space-y-5 text-center ml-auto">
+            <h1 className="font-bold text-white text-4xl text-center">Our coding languages <i className="fa fa-code text-blue-400" /></h1>
+            <div className="tech-row cointainer flex flex-row space-x-5 justify-center mr-auto ml-auto flex-wrap flex-grow-0 flex-shrink-0 flex-basis-auto">
+
+            <a className="tech-card" target="_blank">
+            <h2 className="font-bold text-white text-2xl text-center tech-icon"><i className="fab fa-js-square"></i></h2>
+                <h2 className="font-bold text-white text-2xl text-center tech-title">&nbsp;&nbsp;JavaScript</h2>
+            </a>
+            <a className="tech-card" target="_blank">
+            <h2 className="font-bold text-white text-2xl text-center tech-icon"><i className="fab fa-node-js"></i></h2>
+                <h2 className="font-bold text-white text-2xl text-center tech-title">&nbsp;&nbsp;Node.js</h2>
+            </a>
+            <a className="tech-card" target="_blank">
+            <h2 className="font-bold text-white text-2xl text-center tech-icon"><i className="fab fa-react"></i></h2>
+                <h2 className="font-bold text-white text-2xl text-center tech-title">&nbsp;&nbsp;React.js</h2>
+            </a>
+            <a className="tech-card" target="_blank">
+            <h2 className="font-bold text-white text-2xl text-center tech-icon"><i className="fab fa-html5"></i></h2>
+                <h2 className="font-bold text-white text-2xl text-center tech-title">&nbsp;&nbsp;HTML</h2>
+            </a>
+            <a className="tech-card" target="_blank">
+            <h2 className="font-bold text-white text-2xl text-center tech-icon"><i className="fab fa-css3-alt"></i></h2>
+                <h2 className="font-bold text-white text-2xl text-center tech-title">&nbsp;&nbsp;CSS</h2>
+            </a>
+
+            </div>
+        </div>
         </>
     );
 };
