@@ -56,8 +56,9 @@ export default function Index() {
         } 
     }
     }
+
     
-    return ( 
+    return (
         setInterval(() => {
             thisDate = Date.now();
             typeof document !== 'undefined' ? document.querySelector('.cointdown-text').innerHTML = countDown(thisDate, new Date('2023-10-08').getTime()) : null;
@@ -68,8 +69,11 @@ export default function Index() {
         <>
         <div className="h-96 flex items-center justify-center">
             <div>
-                <h1 className="flex items-center justify-center font-bold text-6xl text-center text-white">Azury&nbsp;<p className="main-text">Industries</p></h1>
+                <h1 className="font-bold text-6xl text-center other-text">Azury&nbsp;<p className="main-text">Industries</p></h1>
                 <p className="mt-3 font-light text-center mx-auto text-zinc-300">COMING SOON IN <span className="cointdown-text">{countDown(thisDate, new Date('2023-10-08').getTime())}</span></p>
+  
+                <p className="mt-3 font-light text-center mx-auto text-zinc-300"><a className="sub-text-think" id="sub-text-think">Create.</a> <a className="sub-text-make" id="sub-text-make">Automate.</a> <a className="sub-text-solve" id="sub-text-solve">Engage.</a></p>
+
                 <button onClick={notify} className="bg-blue-400 hover:bg-white shadow-blue-800/20 hover:shadow-white/20 shadow-xl py-3 px-6 mx-auto mt-5 flex items-center justify-center rounded-lg text-zinc-900 transition-all">
                     <i className="mr-1.5 fa fa-bell" /> Notify me
                 </button>
