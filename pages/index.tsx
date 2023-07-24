@@ -1,6 +1,7 @@
 
 import toast, { Toaster } from 'react-hot-toast';
-export default function Index() {
+import * as React from "react";
+export default function Index(props: React.SVGProps<SVGSVGElement>) {
     let thisDate = Date.now();
     const countDown = (start: number, end: number) => {
         const diff = end - start;
@@ -12,66 +13,6 @@ export default function Index() {
         return `${days}d, ${hours}h, ${minutes}m, ${seconds}s`;
     };
 
-    let text = ['Studios', 'Community', 'Development', 'Industries'];
-    let usedText = [];
-
-    setInterval(() => {
-        if(typeof document !== 'undefined') {
-            const randomText = () => {
-                if(!document.querySelector('.main-text')) return;
-                if(window.location.pathname !== '/') return;
-                const random = Math.floor(Math.random() * text.length);
-                if(usedText.length === text.length) {
-                    usedText = [];
-                    document.querySelector('.main-text').animate([
-                        {
-                            opacity: 0,
-                            transform: 'translateY(-20px)'
-                        },
-                        {
-                            opacity: 1,
-                            transform: 'translateY(0px)'
-                        },
-                        {
-                            opacity: 1,
-                            transform: 'translateY(0px)'
-                        },
-                        {
-                            opacity: 0,
-                            transform: 'translateY(20px)'
-                        }
-                    ], {
-                        duration: 500,
-                        easing: 'ease-in-out',
-                        fill: 'forwards'
-                    });
-                    document.querySelector('.main-text').innerHTML = 'Industries'
-                    return;
-                }
-                if(usedText.includes(text[random])) {
-                    randomText();
-                } else {
-                    usedText.push(text[random]);
-                    document.querySelector('.main-text').animate([
-                        {
-                            opacity: 0,
-                            transform: 'translateY(-20px)'
-                        },
-                        {
-                            opacity: 1,
-                            transform: 'translateY(0px)'
-                        },
-                    ], {
-                        duration: 500,
-                        easing: 'ease-in-out',
-                        fill: 'forwards'
-                    });
-                    document.querySelector('.main-text').innerHTML = text[random];
-                }
-            };
-            randomText();
-        }
-    }, 10000);
 
     const notify = () => {
         if(Notification.permission === 'granted') {
@@ -113,9 +54,9 @@ export default function Index() {
         <>
         <div className="h-96 flex items-center justify-center">
             <div>
-                <h1 className="font-bold text-6xl text-center text-transparent bg-gradient-to-r bg-clip-text from-gray-300 to-gray-500">Azury&nbsp;<p className="main-text text-transparent bg-gradient-to-r bg-clip-text from-gray-300 to-gray-500">Industries</p></h1>
-                
-                <p className="mt-3 font-light text-center mx-auto text-zinc-300">COMING SOON IN <span className="cointdown-text uppercase">{countDown(thisDate, new Date('2023-10-08').getTime())}</span></p>
+                <h1 className="font-bold text-6xl text-center jsx-1b2b5b2a3b6a5b5a bg-text-lightgray">Azury&nbsp;<p className="main-text jsx-1b2b5b2a3b6a5b5a bg-text-lightgray">Industries</p></h1>
+
+                <p className="mt-3 font-light text-center mx-auto text-zinc-300 text-bold text-casing"><b>LAUNCH SOON IN</b> <span className="cointdown-text uppercase">{countDown(thisDate, new Date('2023-10-08').getTime())}</span></p>
   
                 <p className="mt-3 font-light text-center mx-auto text-zinc-300"><a className="sub-text-think" id="sub-text-think">Create.</a> <a className="sub-text-make" id="sub-text-make">Automate.</a> <a className="sub-text-solve" id="sub-text-solve">Engage.</a></p>
 
@@ -125,7 +66,7 @@ export default function Index() {
             </div>
         </div>
         <div className="flex flex-col space-y-5 text-left w-80">
-            <h1 className="font-bold text-white text-4xl text-left">About Us <i className="fa fa-users text-blue-400" /></h1>
+            <h1 className="font-bold text-white text-4xl text-left">Who We <span className="jsx-ed981c243ab0ceaf bg-text-blue">Are&nbsp; <i className="fal fa-rocket-launch" /></span></h1>
             <p className="mt-3 font-light text-left text-zinc-300">
                 Azury Industries is a company that develops discord products such as bots or APIs for free or cheap.
                 We are a small team of developers who are passionate about programming and want to share our knowledge with the world.
@@ -133,7 +74,7 @@ export default function Index() {
         </div>
         <br></br>
         <div className="flex flex-col space-y-5 text-right w-80 ml-auto">
-            <h1 className="font-bold text-white text-4xl text-right"><i className="fa fa-rocket text-blue-400" /> Our Mission</h1>
+            <h1 className="font-bold text-white text-4xl text-right">Our <span className="jsx-ed981c243ab0ceaf bg-text-blue">Mission&nbsp; <i className="fal fa-rocket-launch" /></span></h1>
             <p className="mt-3 font-light text-right text-zinc-300">
                 Our mission is to make the world a better place by providing free or cheap products to the world.
                 We want to change the way people think about programming and make it more accessible to everyone.
@@ -141,36 +82,101 @@ export default function Index() {
         </div>
         <br></br><br></br><br></br>
         <div className="flex flex-col space-y-5 text-center ml-auto">
-            <h1 className="font-bold text-white text-4xl text-center">Our Team <i className="fa fa-wrench text-blue-400" /></h1>
-            <div className="team-row cointainer flex flex-row space-x-5 justify-center mr-auto ml-auto flex-wrap flex-grow-0 flex-shrink-0 flex-basis-auto">
+        <h1 className="jsx-ed981c243ab0ceaf flex items-center text-2xl sm:text-4xl text-center tracking-tight text-white">
+        <svg
+      fill="none"
+      stroke="#fff"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+      className="mr-2"
+      height="1em"
+      width="1em"
+      {...props}
+    >
+      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+      <path d="M13 7 A4 4 0 0 1 9 11 A4 4 0 0 1 5 7 A4 4 0 0 1 13 7 z" />
+      <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+    </svg>
 
-            <a className="team-card" target="_blank" href="https://discord.com/users/693553429380857978">
+  The
+  <span className="jsx-ed981c243ab0ceaf bg-text-blue">&nbsp;Team&nbsp;</span>
+  We Love
+</h1>;
+            <div className="flex flex-col items-center justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            <a target="_blank" href="https://discord.com/users/693553429380857978" className="mt-6">
+ <div style={{ '--card-banner': 'url()' } as any } className="group mt-6 project-card p-8 relative rounded-lg overflow-hidden transition-all duration-200 w-full">
+            <div className="flex flex-col mt-3 -ml-2">
+            <a className="flex items-center text-center justify-center space-x-3 -ml-2">
+                <a className="flex items-center text-center justify-center space-x-3 -ml-2">
                 <img src="https://cdn.discordapp.com/avatars/693553429380857978/c0409547c4230f9d20cf529ee8467c52.webp?size=1024?size=256" className="rounded-full w-10 h-10 mx-auto" />
-                <div className="team-username">
                 <h2 className="font-bold text-white text-2xl text-center">Masterious</h2>
-                </div>
-            </a>
+                </a>
+                </a>
+                <h6 className="font-medium mt-1 text-white/40 text-sm -ml-2">Founder & Developer at Azury Industries</h6>
+            </div>
+            </div>
+           </a>
 
-            <a className="team-card" target="_blank" href="https://discord.com/users/711712752246325343">
-                <img src="https://cdn.discordapp.com/avatars/711712752246325343/043a3e4e28f94acd2a3d56aa1625ef18.webp" className="rounded-full w-10 h-10 mx-auto" />
-                <div className="team-username">
-                <h2 className="font-bold text-white text-2xl text-center">Ducko</h2>
-                </div>
-            </a>
-
-            <a className="team-card" target="_blank" href="https://discord.com/users/1090632016812326954">
+           <a target="_blank" href="https://discord.com/users/1090632016812326954" className="mt-6">
+ <div style={{ '--card-banner': 'url()' } as any } className="group mt-6 project-card p-8 relative rounded-lg overflow-hidden transition-all duration-200 w-full text-center">
+            <div className="flex flex-col mt-3 -ml-2">
+                <a className="flex items-center text-center justify-center space-x-3 -ml-2">
+                <a className="flex items-center text-center justify-center space-x-3 -ml-2">
                 <img src="https://cdn.discordapp.com/avatars/1090632016812326954/d7cebc7b04ddc0848d28ca3723ee9f69.webp" className="rounded-full w-10 h-10 mx-auto" />
-                <div className="team-username">
                 <h2 className="font-bold text-white text-2xl text-center">Mee69</h2>
-                </div>
-            </a>
+                </a>
+                </a>
+                <h6 className="font-medium mt-1 text-white/40 text-sm -ml-2">Co-Founder & Developer at Azury Industries</h6>
+            </div>
+            </div>
+           </a>
+
+           <a target="_blank" href="https://discord.com/users/711712752246325343" className="mt-6">
+ <div style={{ '--card-banner': 'url()' } as any } className="group mt-6 project-card p-8 relative rounded-lg overflow-hidden transition-all duration-200 w-full text-center">
+            <div className="flex flex-col mt-3 -ml-2">
+                <a className="flex items-center text-center justify-center space-x-3 -ml-2">
+                <a className="flex items-center text-center justify-center space-x-3 -ml-2">
+                <img src="https://cdn.discordapp.com/avatars/711712752246325343/043a3e4e28f94acd2a3d56aa1625ef18.webp" className="rounded-full w-10 h-10 mx-auto" />
+                <h2 className="font-bold text-white text-2xl text-center">Ducko</h2>
+                </a>
+                </a>
+                <h6 className="font-medium mt-1 text-white/40 text-sm -ml-2">Administrator at Azury Industries</h6>
+            </div>
+            </div>
+           </a>
 
             </div>
         </div>
         <br></br><br></br><br></br>
         <div className="flex flex-col space-y-5 text-center ml-auto">
-            <h1 className="font-bold text-white text-4xl text-center">Our coding languages <i className="fa fa-code text-blue-400" /></h1>
-            <div className="tech-row cointainer flex flex-row space-x-5 justify-center mr-auto ml-auto flex-wrap flex-grow-0 flex-shrink-0 flex-basis-auto">
+<h1 className="jsx-ed981c243ab0ceaf flex items-left text-2xl sm:text-4xl text-center tracking-tight text-white">
+  <svg
+    stroke="currentColor"
+    fill="currentColor"
+    strokeWidth={0}
+    viewBox="0 0 24 24"
+    className="mr-2"
+    height="1em"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill="none"
+      stroke="#fff"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M16.5,19 C17.8807119,19 19,17.8807119 19,16.5 C19,15.1192881 17.8807119,14 16.5,14 C15.1192881,14 14,15.1192881 14,16.5 C14,17.8807119 15.1192881,19 16.5,19 Z M10,5 L12,3 M7.5,10 C8.88071187,10 10,8.88071187 10,7.5 C10,6.11928813 8.88071187,5 7.5,5 C6.11928813,5 5,6.11928813 5,7.5 C5,8.88071187 6.11928813,10 7.5,10 Z M8,16 L16,8 M5.5,21 C6.88071187,21 8,19.8807119 8,18.5 C8,17.1192881 6.88071187,16 5.5,16 C4.11928813,16 3,17.1192881 3,18.5 C3,19.8807119 4.11928813,21 5.5,21 Z M18.5,8 C19.8807119,8 21,6.88071187 21,5.5 C21,4.11928813 19.8807119,3 18.5,3 C17.1192881,3 16,4.11928813 16,5.5 C16,6.88071187 17.1192881,8 18.5,8 Z M12,21 L14,19"
+    />
+  </svg>
+  <span className="jsx-ed981c243ab0ceaf bg-text-blue">Technologies&nbsp;</span>
+  We Use
+</h1>;
+
+            <div className="tech-row cointainer flex flex-row space-x-5 justify-left mr-auto ml-auto flex-wrap flex-grow-0 flex-shrink-0 flex-basis-auto">
 
             <a className="tech-card" target="_blank">
             <h2 className="font-bold text-white text-2xl text-center tech-icon"><i className="fab fa-js-square"></i></h2>
