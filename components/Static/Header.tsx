@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function Header() {
 
     return (
@@ -5,11 +6,14 @@ export default function Header() {
         <div className="nav-bar">
             <div className="flex items-center space-x-3">
                 <i className="text-blue-400 fal fa-fire fa-2x" />
-                <h1 className="font-semibold text-2xl text-white">Azury<span className="text-blue-400">.cc</span></h1>
+                
+            <Link href="/">
+                <h1 className="font-semibold text-2xl text-white cursor-pointer">Azury<span className="text-blue-400">.cc</span></h1>
+            </Link>
             </div>
-            <a target="_blank" href="/projects" className="text-white/70">
-                Projects
-            </a>
+            <Link href="/projects">
+                <a className="text-white/70">Projects</a>
+            </Link>
             <a target="_blank" href="https://github.com/AzuryIndustry">
                 <i className="fab fa-github fa-2x text-blue-400 hover:text-white transition-all" />
             </a>
