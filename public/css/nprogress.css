@@ -1,10 +1,11 @@
 #nprogress {
     pointer-events: none;
-    --color: #fff;
+    --color: #0088f7;
 }
 
 #nprogress .bar {
     background: var(--color);
+    box-shadow: 0 0 10px var(--color), 0 0 5px var(--color);
     position: fixed;
     z-index: 1031;
     top: 0;
