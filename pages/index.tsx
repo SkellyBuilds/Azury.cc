@@ -18,6 +18,8 @@ export default function Index() {
     setInterval(() => {
         if(typeof document !== 'undefined') {
             const randomText = () => {
+                if(!document.querySelector('.main-text')) return;
+                if(window.location.pathname !== '/') return;
                 const random = Math.floor(Math.random() * text.length);
                 if(usedText.length === text.length) {
                     usedText = [];
