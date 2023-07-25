@@ -54,7 +54,7 @@ export default function Index(props: React.SVGProps<SVGSVGElement>) {
         <>
         <div className="h-96 flex items-center justify-center">
             <div>
-                <h1 className="font-bold text-6xl text-center jsx-1b2b5b2a3b6a5b5a bg-text-gray">Azury&nbsp;<p className="main-text jsx-1b2b5b2a3b6a5b5a bg-text-gray">Industries</p></h1>
+                <h1 className="font-bold text-6xl text-center text-white">Azury&nbsp;<p className="main-text text-white">Industries</p></h1>
 
                 <p className="mt-3 font-light text-center mx-auto text-zinc-300 text-bold text-casing"><b>LAUNCH IN</b> <span className="cointdown-text uppercase">{countDown(thisDate, new Date('2023-10-08').getTime())}</span></p>
   
