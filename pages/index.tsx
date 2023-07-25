@@ -66,7 +66,7 @@ export default function Index(props: React.SVGProps<SVGSVGElement>) {
             </div>
         </div>
         <div className="flex flex-col space-y-5 text-left w-80">
-            <h1 className="font-bold text-white text-4xl text-left">Who We <span className="jsx-ed981c243ab0ceaf bg-text-blue">Are&nbsp; <i className="fal fa-rocket-launch" /></span></h1>
+            <h1 className="font-bold text-white text-4xl text-left">Who We <span className="jsx-ed981c243ab0ceaf bg-text-blue">Are&nbsp; <i className="fal fa-note" /></span></h1>
             <p className="mt-3 font-light text-left text-zinc-300">
                 Azury Industries is a company that develops discord products such as bots or APIs for free or cheap.
                 We are a small team of developers who are passionate about programming and want to share our knowledge with the world.
