@@ -22,6 +22,21 @@ export default function App({ Component, pageProps }: AppProps) {
                     <title>Azury Industries</title>
                     <link rel="icon" href="/img/favicon.png" type="image/x-icon" />
                     <link href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" rel="stylesheet" />
+                    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+                    <script type="application/ld+json">
+                   {
+                    "@context": "https://schema.org",
+                    "@type": "Website",
+                    "url": "https://azury.cc/"
+        }
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="theme-color" content="#60a5fa"  />
+        <link rel="icon" href="/img/favicon.png" type="image/x-icon"  />
+        <meta name="twitter:image" content="/img/favicon.png"  />
+        <link rel="canonical" href="https://azury.cc/"  />
+        <meta name="publisher" content="2023 Azury Industries" />
+        <meta name="author" content="Azury Industries", "https://azury.cc/">
                 </>
             } />
             <main className="min-h-[100vh] max-w-screen-lg p-5 w-full md:py-10 md:w-10/12 lg:py-10 lg:w-10/12 mx-auto transition-all duration-300">
